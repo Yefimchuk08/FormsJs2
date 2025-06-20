@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Список автомобілів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <h2 class="mb-4">Список автомобілів</h2>
+    <form id="carForm" class="row g-3 mb-3">
+      <div class="col-md-4">
+        <input type="text" id="model" class="form-control" placeholder="Модель" required>
+      </div>
+      <div class="col-md-4">
+        <input type="number" id="year" class="form-control" placeholder="Рік випуску" required>
+      </div>
+      <div class="col-md-4">
+        <select id="type" class="form-select" required>
+          <option value="">Тип кузова</option>
+          <option value="Седан">Седан</option>
+          <option value="Хетчбек">Хетчбек</option>
+          <option value="Позашляховик">Позашляховик</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Додати авто</button>
+        <button type="button" id="clearTable" class="btn btn-danger ms-2">Очистити список</button>
+      </div>
+    </form>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Модель</th>
+          <th>Рік</th>
+          <th>Тип</th>
+          <th>Дії</th>
+        </tr>
+      </thead>
+      <tbody id="carTableBody"></tbody>
+    </table>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
